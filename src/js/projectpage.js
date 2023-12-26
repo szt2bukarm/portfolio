@@ -6,6 +6,12 @@ const projects = document.querySelector('.projects__list');
 const projectPage = document.querySelector('.project-page');
 const mainPage = document.querySelector('.main-page');
 const backBtn = document.querySelector('.project-page-view-back')
+const viewProject = document.querySelector('.project-page-view-btn')
+let projectLink;
+
+viewProject.addEventListener('click',function() {
+    window.open(projectLink);
+})
 
 projects.addEventListener('click',function(e) {
     const clickedProject = e.target.closest('.projects__list-item');
@@ -138,6 +144,7 @@ const projectBgText = document.querySelector('.project-page-bgtext')
 const projectBorder = document.querySelector('.project-page-images-border')
 const projectViewText = document.querySelector('.project-page-view-btn--text')
 const loadBenjo = function() {
+    projectLink = 'https://benjoapp.netlify.app/'
     projectName.innerText = 'Benjo'
     projectDesc.innerText = 'A music streaming service built with the YouTube,Spotify and MusixMatch API.'
     projectImages.innerHTML = 
@@ -164,6 +171,7 @@ const loadBenjo = function() {
 
 }
 const loadMovieScroller = function() {
+    projectLink = 'https://szt2bukarm.github.io/MovieScroller/'
     projectName.innerText = 'MovieScroller'
     projectDesc.innerText = 'A scroller featuring different movies, perfect for a streaming site.'
     projectImages.innerHTML = 
@@ -192,6 +200,7 @@ const loadMovieScroller = function() {
 }
 
 const loadGTC = function() {
+    projectLink = 'https://szt2bukarm.github.io/GuessTheCharacter/'
     projectName.innerText = 'Guess The Character'
     projectDesc.innerText = 'A trivia style character guessing game.'
     projectImages.innerHTML = 
